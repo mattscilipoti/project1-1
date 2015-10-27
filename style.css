@@ -1,0 +1,139 @@
+
+body {
+  /*background-image: url(#); */
+  background-color: #000;
+}
+
+h1 {
+  position: fixed;
+  top: 1px;
+  left: 20em;
+  color: #005;
+  font-family: sans-serif;
+}
+
+button {
+    width: 10em;
+    height: 7em;
+}
+
+#one {
+  position: relative;
+  top: 20em;
+  left: 15em;
+}
+
+#two {
+  position: relative;
+  top: 20em;
+  left: 23em;
+}
+
+#three {
+  position: relative;
+  top: 20em;
+  left: 31em;
+}
+
+#four {
+  position: relative;
+  top: 20em;
+  left: 40em;
+}
+
+#five {
+  position: relative;
+  top: 20em;
+  left: 48em;
+}
+
+#six {
+  position: relative;
+  top: 20em;
+  left: 55em;
+}
+
+#display-score {
+  position: relative;
+  top:2em;
+  left: 10em;
+  width: 20em;
+  height: 4em;
+  margin: 10px;
+  padding: 2px;
+  text-align: center;
+}
+
+#reset {
+  position: relative;
+  top:8em;
+  left:35em;
+  right: auto;
+}
+
+.card {
+  display: inline-block;
+  width: 100px;
+  height: 140px;
+  position: relative;
+  -webkit-perspective: 200px;
+  -moz-perspective: 200px;
+  perspective: 2000px;
+  left: 50%;
+  margin-left: -50px;
+  top: 40vh;
+  margin-top: -70px;
+}
+
+.card .front, .card .back {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 100px;
+  height: 140px;
+  background: #fff;
+  border-style: solid;
+  border-color: #aaa;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  transition-delay: 0s;
+}
+.card .back {
+  background: limegreen;
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+  border: 0px solid white;
+}
+.card:hover .front, .card:hover .back {
+  -webkit-transform: rotateY(-90deg);
+  -moz-transform: rotateY(-90deg);
+  -ms-transform: rotateY(-90deg);
+  -o-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+  transition-delay: 0s;
+}
+.card:hover .back {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  display: block;
+  width: 150px;
+  height: 210px;
+  transition-delay: 0.3s;
+  top: -25px;
+  left: -35px;
+  border-width: 4px;
+}
