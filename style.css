@@ -1,20 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
 
 body {
   /*background-image: url(#); */
-  background-color: #000;
+  background-color: #023;
+  font-family: verdana;
 }
 
 h1 {
   position: fixed;
-  top: 1px;
-  left: 20em;
-  color: #005;
-  font-family: sans-serif;
+  top: 2px;
+  left: 7.7em;
+  color: #aaa;
+  font-family: 'Amatic SC', cursive;
+  font-size: 5em;
 }
 
 button {
     width: 10em;
-    height: 7em;
+    height: 4em;
+    border-radius: 1em;
+    color: #fff;
+    background-color: #FF4323;
 }
 
 #one {
@@ -53,21 +59,22 @@ button {
   left: 55em;
 }
 
-#display-score {
+/*#display-score {
   position: relative;
-  top:2em;
-  left: 10em;
+  top:47em;
+  left: -11em;
   width: 20em;
   height: 4em;
   margin: 10px;
   padding: 2px;
   text-align: center;
-}
+  border-radius: 1em;
+}*/
 
 #reset {
   position: relative;
-  top:8em;
-  left:35em;
+  top:40em;
+  left:29em;
   right: auto;
 }
 
@@ -92,7 +99,7 @@ button {
   display: block;
   width: 100px;
   height: 140px;
-  background: #fff;
+  background: #acd;
   border-style: solid;
   border-color: #aaa;
   -webkit-transform: rotateY(0deg);
@@ -104,15 +111,16 @@ button {
   -moz-transition: all 0.2s;
   transition: all 0.2s;
   transition-delay: 0s;
+  border-radius: .5em;
 }
 .card .back {
-  background: limegreen;
+  background: #7DFFAC;
   -webkit-transform: rotateY(90deg);
   -moz-transform: rotateY(90deg);
   -ms-transform: rotateY(90deg);
   -o-transform: rotateY(90deg);
   transform: rotateY(90deg);
-  transition-delay: 0s;
+  transition-delay: .01s;
   border: 0px solid white;
 }
 .card:hover .front, .card:hover .back {
