@@ -31,6 +31,9 @@ p {
   color: #aaa;
 
 }
+
+/* mms: In the future, I recommend using another method to position the items on the page.  The web was designed to allow items to fill across the screen.  It's a bit overkill to manually position each item.  Maybe a horizontal list?  That would drop this down a few lines of css.
+Currently, it's a pain to create and adjust.  Imagine if you changed the size of each card - all this would have to be tweaked. */
 #one {
   position: relative;
   top: 20em;

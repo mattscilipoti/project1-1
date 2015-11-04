@@ -5,8 +5,12 @@
 //};
 
 $(document).ready(function(){
+  // mms: ensure the code that starts your game and manipulates the DOM, occurs after the document is ready
+  listeners();
 });
 
+
+// mms: I ould like to see you pass in the collection that will be randomized.
 function returnRandomSelected(){
     var order = [];
     var count = 0;
@@ -27,7 +31,8 @@ function returnRandomSelected(){
     }
     return order;
   }
-    var cOrder = returnRandomSelected();
+    // mms: remove duplicate.  Already called in listeners()
+    // var cOrder = returnRandomSelected();
   /***********************/
 var cardList = [
   ["#one .front","#one .back"],
@@ -45,17 +50,20 @@ var qaPairs = [
   ["Capital of Cuba","Havana"],
   ["Capital of Chile","Santiago"]
 ];
-function startGame(){
+function startGame(cOrder){
   for(var x = 0; x < 6; x++){
   $(cardList[x][0]).text(qaPairs[cOrder[x]][0]);
   $(cardList[x][1]).text(qaPairs[cOrder[x]][1]);
   }
 }
-startGame();
+// mms: duplicate call.  Already called from listeners()
+// startGame();
 function listeners(){
   $("#reset").on("click", function(){
+    // mms: recommend rename, what is a cOrder?
     cOrder = returnRandomSelected();
-    startGame();
+    startGame(cOrder);
   });
 }
-listeners();
+// mms: moved listeners() execution to document.ready
+// listeners();
